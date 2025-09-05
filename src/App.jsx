@@ -18,11 +18,16 @@ import {
 	TableHead,
 	TableHeader,
 	TableRow,
+	TableExpandHeader,
+	TableExpandRow,
+	TableExpandedRow,
 	TableToolbar,
 	TableToolbarAction,
 	TableToolbarContent,
 	TableToolbarMenu,
 	TableToolbarSearch,
+	OverflowMenu,
+	OverflowMenuItem,
 } from "@carbon/react";
 import LogoURL from "./images/logo.png";
 import { PlayerData } from "./data/playerData";
@@ -35,13 +40,15 @@ import {
 	Filter,
 	Checkmark,
 } from "@carbon/react/icons";
-import { DatesData } from "./data/datesData";
-import { DatesDataB } from "./data/datesDataB";
-import { useEffect, useState } from "react";
+// import { DatesData } from "./data/datesData";
+// import { DatesDataB } from "./data/datesDataB";
+import React, { useEffect, useState } from "react";
 function App() {
-	const [currentDates, setCurrentDates] = useState(DatesData);
-	const [selectedTeamCalendar, setSelectedTeamCalendar] = useState(0);
-	const [filteredPlayerData, setFilteredPlayerData] = useState(PlayerData);
+	//const [currentDates, setCurrentDates] = useState(DatesData);
+	//const [selectedTeamCalendar, setSelectedTeamCalendar] = useState(0);
+	const [filteredPlayerData, setFilteredPlayerData] = useState(
+		PlayerData.sort((a, b) => a.number - b.number)
+	);
 	const [classFilter, setClassFilter] = useState("");
 	const ContentStyle = {
 		height: "100%",
@@ -61,38 +68,54 @@ function App() {
 	useEffect(() => {
 		const fpd =
 			classFilter === ""
-				? PlayerData
-				: PlayerData.filter((el) => el.team === classFilter);
+				? PlayerData.sort((a, b) => a.number - b.number)
+				: PlayerData.sort((a, b) => a.number - b.number).filter(
+						(el) => el.team === classFilter
+				  );
 		setFilteredPlayerData(fpd);
 	}, [classFilter]);
-	const evalEventDate = (eventDate, currentDate) => {
-		const EvDate = eventDate.setHours(0, 0, 0, 0);
-		const CurDate = currentDate.setHours(0, 0, 0, 0);
-		const EvTime = EvDate;
-		const CurTime = CurDate;
 
-		if (EvTime < CurTime) {
-			return EventState.PAST;
-		} else if (EvTime === CurTime) {
-			return EventState.PRESENT;
-		} else {
-			return EventState.FUTURE;
+	// const evalEventDate = (eventDate, currentDate) => {
+	// 	const EvDate = eventDate.setHours(0, 0, 0, 0);
+	// 	const CurDate = currentDate.setHours(0, 0, 0, 0);
+	// 	const EvTime = EvDate;
+	// 	const CurTime = CurDate;
+
+	// 	if (EvTime < CurTime) {
+	// 		return EventState.PAST;
+	// 	} else if (EvTime === CurTime) {
+	// 		return EventState.PRESENT;
+	// 	} else {
+	// 		return EventState.FUTURE;
+	// 	}
+	// };
+
+	// const handleCalChange = (e) => {
+	// 	if (e.name === "A") {
+	// 		setCurrentDates(DatesData);
+	// 	} else {
+	// 		setCurrentDates(DatesDataB);
+	// 	}
+	// 	setSelectedTeamCalendar(e.index);
+	// };
+	const translateClass = (inClassStr) => {
+		switch (inClassStr) {
+			case "FR":
+				return "Freshman";
+			case "SO":
+				return "Sophomore";
+			case "JR":
+				return "Junior";
+			case "SR":
+				return "Senior";
+			default:
+				return "";
 		}
 	};
-
-	const handleCalChange = (e) => {
-		if (e.name === "A") {
-			setCurrentDates(DatesData);
-		} else {
-			setCurrentDates(DatesDataB);
-		}
-		setSelectedTeamCalendar(e.index);
-	};
-
 	return (
 		<div className="appContainer">
 			<HeaderContainer
-				render={({ isSideNavExpanded, onClickSideNavExpand }) => (
+				render={() => (
 					<>
 						<Header aria-label="IBM Platform Name">
 							<img className="headerLogo" src={LogoURL} />
@@ -126,7 +149,7 @@ function App() {
 									<MenuIcon size={iconSize} />
 								</HeaderGlobalAction> */}
 							</HeaderGlobalBar>
-							<HeaderPanel
+							{/* <HeaderPanel
 								expanded={isSideNavExpanded}
 								onHeaderPanelFocus={onClickSideNavExpand}
 								href="#switcher-button"
@@ -136,7 +159,7 @@ function App() {
 										: "eventsPanelClosed eventsPanel"
 								}
 							>
-								<section>
+								 <section>
 									<ContentSwitcher
 										size="lg"
 										onChange={handleCalChange}
@@ -145,8 +168,8 @@ function App() {
 										<Switch name="A" text="A Schedule" />
 										<Switch name="B" text="B Schedule" />
 									</ContentSwitcher>
-								</section>
-								<section className="appDates">
+								</section> 
+								 <section className="appDates">
 									{currentDates.map((monthEl, mIdx) => {
 										const currentDate = new Date();
 										return (
@@ -167,9 +190,9 @@ function App() {
 																eventDate,
 																currentDate
 															);
-														console.log(
-															`eventDate (${eventDate}) state is: ${eventDateState}`
-														);
+														// console.log(
+														// 	`eventDate (${eventDate}) state is: ${eventDateState}`
+														// );
 														return (
 															<div
 																className={`fbEvent ${eventDateState}`}
@@ -210,15 +233,16 @@ function App() {
 								<div className="appPanelFooter">
 									Version {version}
 								</div>
-							</HeaderPanel>
+							</HeaderPanel> */}
 						</Header>
 						<Content id="main-content" style={ContentStyle}>
 							<section
-								className={
-									isSideNavExpanded
-										? "TableHide appDataTable"
-										: "TableShow appDataTable"
-								}
+								className="TableShow appDataTable"
+								// className={
+								// 	isSideNavExpanded
+								// 		? "TableHide appDataTable"
+								// 		: "TableShow appDataTable"
+								// }
 							>
 								<DataTable
 									isSortable
@@ -228,12 +252,194 @@ function App() {
 									{({
 										rows,
 										headers,
-										getTableProps,
 										getHeaderProps,
 										getRowProps,
+										getExpandedRowProps,
+										getTableProps,
+										getTableContainerProps,
 										onInputChange,
 									}) => (
-										<TableContainer>
+										<TableContainer
+											{...getTableContainerProps()}
+										>
+											<TableToolbar className="tableToolBar">
+												<TableToolbarContent className="TableTBContent">
+													<TableToolbarSearch
+														expanded
+														onChange={onInputChange}
+														placeholder="Filter players"
+													/>
+													<TableToolbarMenu
+														className="ToolbarMenu"
+														renderIcon={Filter}
+													>
+														<TableToolbarAction
+															onClick={() =>
+																setClassFilter(
+																	""
+																)
+															}
+														>
+															{classFilter ===
+																"" && (
+																<Checkmark
+																	className="checkedFilter"
+																	size="12"
+																/>
+															)}
+															Show All
+														</TableToolbarAction>
+														<TableToolbarAction
+															onClick={() =>
+																setClassFilter(
+																	"vjv"
+																)
+															}
+														>
+															{classFilter ===
+																"vjv" && (
+																<Checkmark
+																	className="checkedFilter"
+																	size="12"
+																/>
+															)}
+															Show JV/Varsity
+														</TableToolbarAction>
+														<TableToolbarAction
+															onClick={() =>
+																setClassFilter(
+																	"fr"
+																)
+															}
+														>
+															{classFilter ===
+																"fr" && (
+																<Checkmark
+																	className="checkedFilter"
+																	size="12"
+																/>
+															)}
+															Show Freshman
+														</TableToolbarAction>
+													</TableToolbarMenu>
+												</TableToolbarContent>
+											</TableToolbar>
+											<Table
+												{...getTableProps()}
+												aria-label="sample table"
+											>
+												<TableHead>
+													<TableRow>
+														<TableExpandHeader aria-label="expand row" />
+														{headers.map(
+															(header, i) => (
+																<TableHeader
+																	key={i}
+																	{...getHeaderProps(
+																		{
+																			header,
+																		}
+																	)}
+																>
+																	{
+																		header.header
+																	}
+																</TableHeader>
+															)
+														)}
+													</TableRow>
+												</TableHead>
+												<TableBody>
+													{rows.map((row, rIdx) => {
+														const tmpRowData =
+															filteredPlayerData.find(
+																(el) =>
+																	el.id ===
+																	row.id
+															);
+														return (
+															<React.Fragment
+																key={rIdx}
+															>
+																<TableExpandRow
+																	{...getRowProps(
+																		{ row }
+																	)}
+																>
+																	{row.cells.map(
+																		(
+																			cell,
+																			rowCellIdx
+																		) => (
+																			<TableCell
+																				key={
+																					rowCellIdx
+																				}
+																			>
+																				{
+																					cell.value
+																				}
+																			</TableCell>
+																		)
+																	)}
+																</TableExpandRow>
+																<TableExpandedRow
+																	colSpan={
+																		headers.length +
+																		1
+																	}
+																	className="demo-expanded-td"
+																	{...getExpandedRowProps(
+																		{ row }
+																	)}
+																>
+																	<ul>
+																		<li>
+																			{`#${tmpRowData.number}: `}
+																			<strong>{`${tmpRowData.first_name} ${tmpRowData.last_name}`}</strong>
+																		</li>
+																		<li>{`${
+																			tmpRowData.height
+																		} - ${
+																			tmpRowData.weight
+																		} lbs   ${translateClass(
+																			tmpRowData.class
+																		)}`}</li>
+																		{tmpRowData.position_o && (
+																			<li>{`Offense: ${tmpRowData.position_o}`}</li>
+																		)}
+																		{tmpRowData.position_d && (
+																			<li>{`Defense: ${tmpRowData.position_d}`}</li>
+																		)}
+																	</ul>
+																</TableExpandedRow>
+															</React.Fragment>
+														);
+													})}
+												</TableBody>
+											</Table>
+										</TableContainer>
+									)}
+								</DataTable>
+								{/* <DataTable
+									isSortable
+									headers={PlayerDataHeaders}
+									rows={filteredPlayerData}
+								>
+									{({
+										rows,
+										headers,
+										getHeaderProps,
+										getExpandHeaderProps,
+										getRowProps,
+										getExpandedRowProps,
+										getTableProps,
+										getTableContainerProps,
+										onInputChange,
+									}) => (
+										<TableContainer
+											{...getTableContainerProps()}
+										>
 											<TableToolbar>
 												<TableToolbarContent className="TableTBContent">
 													<TableToolbarSearch
@@ -302,6 +508,9 @@ function App() {
 											>
 												<TableHead>
 													<TableRow>
+														<TableExpandHeader
+															id={"expand"}
+														/>
 														{headers.map(
 															(header, hIdx) => (
 																<TableHeader
@@ -322,32 +531,59 @@ function App() {
 												</TableHead>
 												<TableBody>
 													{rows.map((row, rIdx) => (
-														<TableRow
-															{...getRowProps({
-																row,
-															})}
-															key={rIdx}
+														<React.Fragment
+															key={row.id}
 														>
-															{row.cells.map(
-																(cell) => (
-																	<TableCell
-																		key={
-																			cell.id
-																		}
-																	>
-																		{
-																			cell.value
-																		}
-																	</TableCell>
-																)
-															)}
-														</TableRow>
+															<TableExpandRow
+																id={`expanded-row-${row.id}`}
+																expandHeader="expand"
+																{...getRowProps(
+																	{
+																		row,
+																	}
+																)}
+																key={rIdx}
+															>
+																{row.cells.map(
+																	(cell) => (
+																		<TableCell
+																			key={
+																				cell.id
+																			}
+																		>
+																			{
+																				cell.value
+																			}
+																		</TableCell>
+																	)
+																)}
+															</TableExpandRow>
+															<TableExpandedRow
+																colSpan={
+																	headers.length +
+																	3
+																}
+																className="demo-expanded-td"
+																{...getExpandedRowProps(
+																	{ row }
+																)}
+															>
+																<h6>
+																	Expandable
+																	row content
+																</h6>
+																<div>
+																	Description
+																	here
+																</div>
+															</TableExpandedRow>
+														</React.Fragment>
 													))}
 												</TableBody>
 											</Table>
 										</TableContainer>
 									)}
-								</DataTable>
+								</DataTable> */}
 							</section>
 						</Content>
 					</>

@@ -1,3 +1,7 @@
+@use "@carbon/react" with (
+	$font-path: "@ibm/plex"
+);
+
 .appContainer {
 	display: flex;
 	flex-direction: column;
@@ -124,4 +128,8 @@ span.day {
 }
 .checkedFilter {
 	margin-inline-end: 8px;
+}
+.tableToolBar {
+	position: sticky;
+	top: 48px;
 }

@@ -9,7 +9,7 @@ const PlayerData = [
 		weight: "130",
 		class: "FR",
 		team: "fr",
-		id: 0,
+		id: "player_0",
 	},
 	{
 		number: "5",
@@ -21,7 +21,7 @@ const PlayerData = [
 		weight: "165",
 		class: "FR",
 		team: "fr",
-		id: 1,
+		id: "player_1",
 	},
 	{
 		number: "6",
@@ -33,7 +33,7 @@ const PlayerData = [
 		weight: "160",
 		class: "FR",
 		team: "fr",
-		id: 2,
+		id: "player_2",
 	},
 	{
 		number: "7",
@@ -45,7 +45,7 @@ const PlayerData = [
 		weight: "175",
 		class: "FR",
 		team: "fr",
-		id: 3,
+		id: "player_3",
 	},
 	{
 		number: "10",
@@ -57,7 +57,7 @@ const PlayerData = [
 		weight: "145",
 		class: "FR",
 		team: "fr",
-		id: 4,
+		id: "player_4",
 	},
 	{
 		number: "11",
@@ -69,7 +69,7 @@ const PlayerData = [
 		weight: "145",
 		class: "FR",
 		team: "fr",
-		id: 5,
+		id: "player_5",
 	},
 	{
 		number: "12",
@@ -81,7 +81,7 @@ const PlayerData = [
 		weight: "170",
 		class: "FR",
 		team: "fr",
-		id: 6,
+		id: "player_6",
 	},
 	{
 		number: "15",
@@ -93,7 +93,7 @@ const PlayerData = [
 		weight: "160",
 		class: "FR",
 		team: "fr",
-		id: 7,
+		id: "player_7",
 	},
 	{
 		number: "16",
@@ -105,7 +105,7 @@ const PlayerData = [
 		weight: "130",
 		class: "FR",
 		team: "fr",
-		id: 8,
+		id: "player_8",
 	},
 	{
 		number: "17",
@@ -117,7 +117,7 @@ const PlayerData = [
 		weight: "170",
 		class: "FR",
 		team: "fr",
-		id: 9,
+		id: "player_9",
 	},
 	{
 		number: "18",
@@ -129,7 +129,7 @@ const PlayerData = [
 		weight: "155",
 		class: "FR",
 		team: "fr",
-		id: 10,
+		id: "player_10",
 	},
 	{
 		number: "19",
@@ -141,7 +141,7 @@ const PlayerData = [
 		weight: "145",
 		class: "FR",
 		team: "fr",
-		id: 11,
+		id: "player_11",
 	},
 	{
 		number: "20",
@@ -153,7 +153,7 @@ const PlayerData = [
 		weight: "135",
 		class: "FR",
 		team: "fr",
-		id: 12,
+		id: "player_12",
 	},
 	{
 		number: "21",
@@ -165,7 +165,7 @@ const PlayerData = [
 		weight: "140",
 		class: "FR",
 		team: "fr",
-		id: 13,
+		id: "player_13",
 	},
 	{
 		number: "22",
@@ -177,7 +177,7 @@ const PlayerData = [
 		weight: "150",
 		class: "FR",
 		team: "fr",
-		id: 14,
+		id: "player_14",
 	},
 	{
 		number: "26",
@@ -189,7 +189,7 @@ const PlayerData = [
 		weight: "140",
 		class: "FR",
 		team: "fr",
-		id: 15,
+		id: "player_15",
 	},
 	{
 		number: "28",
@@ -201,7 +201,7 @@ const PlayerData = [
 		weight: "160",
 		class: "FR",
 		team: "fr",
-		id: 16,
+		id: "player_16",
 	},
 	{
 		number: "31",
@@ -213,7 +213,7 @@ const PlayerData = [
 		weight: "125",
 		class: "FR",
 		team: "fr",
-		id: 17,
+		id: "player_17",
 	},
 	{
 		number: "33",
@@ -225,7 +225,7 @@ const PlayerData = [
 		weight: "120",
 		class: "FR",
 		team: "fr",
-		id: 18,
+		id: "player_18",
 	},
 	{
 		number: "45",
@@ -237,7 +237,7 @@ const PlayerData = [
 		weight: "155",
 		class: "FR",
 		team: "fr",
-		id: 19,
+		id: "player_19",
 	},
 	{
 		number: "51",
@@ -249,7 +249,7 @@ const PlayerData = [
 		weight: "175",
 		class: "FR",
 		team: "fr",
-		id: 20,
+		id: "player_20",
 	},
 	{
 		number: "52",
@@ -261,7 +261,7 @@ const PlayerData = [
 		weight: "170",
 		class: "FR",
 		team: "fr",
-		id: 21,
+		id: "player_21",
 	},
 	{
 		number: "53",
@@ -273,7 +273,7 @@ const PlayerData = [
 		weight: "165",
 		class: "FR",
 		team: "fr",
-		id: 22,
+		id: "player_22",
 	},
 	{
 		number: "58",
@@ -285,7 +285,7 @@ const PlayerData = [
 		weight: "170",
 		class: "FR",
 		team: "fr",
-		id: 23,
+		id: "player_23",
 	},
 	{
 		number: "60",
@@ -297,7 +297,7 @@ const PlayerData = [
 		weight: "190",
 		class: "FR",
 		team: "fr",
-		id: 24,
+		id: "player_24",
 	},
 	{
 		number: "65",
@@ -309,7 +309,7 @@ const PlayerData = [
 		weight: "190",
 		class: "FR",
 		team: "fr",
-		id: 25,
+		id: "player_25",
 	},
 	{
 		number: "73",
@@ -321,7 +321,7 @@ const PlayerData = [
 		weight: "180",
 		class: "FR",
 		team: "fr",
-		id: 26,
+		id: "player_26",
 	},
 	{
 		number: "74",
@@ -333,7 +333,7 @@ const PlayerData = [
 		weight: "160",
 		class: "FR",
 		team: "fr",
-		id: 27,
+		id: "player_27",
 	},
 	{
 		number: "75",
@@ -345,7 +345,7 @@ const PlayerData = [
 		weight: "185",
 		class: "FR",
 		team: "fr",
-		id: 28,
+		id: "player_28",
 	},
 	{
 		number: "77",
@@ -357,7 +357,7 @@ const PlayerData = [
 		weight: "230",
 		class: "FR",
 		team: "fr",
-		id: 29,
+		id: "player_29",
 	},
 	{
 		number: "78",
@@ -369,7 +369,7 @@ const PlayerData = [
 		weight: "245",
 		class: "FR",
 		team: "fr",
-		id: 30,
+		id: "player_30",
 	},
 	{
 		number: "79",
@@ -381,7 +381,7 @@ const PlayerData = [
 		weight: "240",
 		class: "FR",
 		team: "fr",
-		id: 31,
+		id: "player_31",
 	},
 	{
 		number: "80",
@@ -393,7 +393,7 @@ const PlayerData = [
 		weight: "130",
 		class: "FR",
 		team: "fr",
-		id: 32,
+		id: "player_32",
 	},
 	{
 		number: "81",
@@ -405,7 +405,7 @@ const PlayerData = [
 		weight: "155",
 		class: "FR",
 		team: "fr",
-		id: 33,
+		id: "player_33",
 	},
 	{
 		number: "88",
@@ -417,7 +417,7 @@ const PlayerData = [
 		weight: "190",
 		class: "FR",
 		team: "fr",
-		id: 34,
+		id: "player_34",
 	},
 	{
 		number: "97",
@@ -429,7 +429,7 @@ const PlayerData = [
 		weight: "150",
 		class: "FR",
 		team: "fr",
-		id: 35,
+		id: "player_35",
 	},
 	{
 		number: "1",
@@ -441,7 +441,7 @@ const PlayerData = [
 		weight: "145",
 		class: "SO",
 		team: "vjv",
-		id: 36,
+		id: "player_36",
 	},
 	{
 		number: "2",
@@ -453,7 +453,7 @@ const PlayerData = [
 		weight: "165",
 		class: "JR",
 		team: "vjv",
-		id: 37,
+		id: "player_37",
 	},
 	{
 		number: "3",
@@ -465,7 +465,7 @@ const PlayerData = [
 		weight: "170",
 		class: "SO",
 		team: "vjv",
-		id: 38,
+		id: "player_38",
 	},
 	{
 		number: "4",
@@ -477,7 +477,7 @@ const PlayerData = [
 		weight: "140",
 		class: "SO",
 		team: "vjv",
-		id: 39,
+		id: "player_39",
 	},
 	{
 		number: "5",
@@ -489,7 +489,7 @@ const PlayerData = [
 		weight: "180",
 		class: "JR",
 		team: "vjv",
-		id: 40,
+		id: "player_40",
 	},
 	{
 		number: "6",
@@ -501,7 +501,7 @@ const PlayerData = [
 		weight: "145",
 		class: "SR",
 		team: "vjv",
-		id: 41,
+		id: "player_41",
 	},
 	{
 		number: "7",
@@ -513,7 +513,7 @@ const PlayerData = [
 		weight: "180",
 		class: "SO",
 		team: "vjv",
-		id: 42,
+		id: "player_42",
 	},
 	{
 		number: "8",
@@ -525,7 +525,7 @@ const PlayerData = [
 		weight: "165",
 		class: "JR",
 		team: "vjv",
-		id: 43,
+		id: "player_43",
 	},
 	{
 		number: "9",
@@ -537,7 +537,7 @@ const PlayerData = [
 		weight: "180",
 		class: "SR",
 		team: "vjv",
-		id: 44,
+		id: "player_44",
 	},
 	{
 		number: "10",
@@ -549,7 +549,7 @@ const PlayerData = [
 		weight: "195",
 		class: "SO",
 		team: "vjv",
-		id: 45,
+		id: "player_45",
 	},
 	{
 		number: "11",
@@ -561,7 +561,7 @@ const PlayerData = [
 		weight: "185",
 		class: "SO",
 		team: "vjv",
-		id: 46,
+		id: "player_46",
 	},
 	{
 		number: "12",
@@ -573,7 +573,7 @@ const PlayerData = [
 		weight: "140",
 		class: "FR",
 		team: "vjv",
-		id: 47,
+		id: "player_47",
 	},
 	{
 		number: "13",
@@ -585,7 +585,7 @@ const PlayerData = [
 		weight: "195",
 		class: "SO",
 		team: "vjv",
-		id: 48,
+		id: "player_48",
 	},
 	{
 		number: "14",
@@ -597,7 +597,7 @@ const PlayerData = [
 		weight: "175",
 		class: "JR",
 		team: "vjv",
-		id: 49,
+		id: "player_49",
 	},
 	{
 		number: "15",
@@ -609,7 +609,7 @@ const PlayerData = [
 		weight: "140",
 		class: "JR",
 		team: "vjv",
-		id: 50,
+		id: "player_50",
 	},
 	{
 		number: "16",
@@ -621,7 +621,7 @@ const PlayerData = [
 		weight: "155",
 		class: "SO",
 		team: "vjv",
-		id: 51,
+		id: "player_51",
 	},
 	{
 		number: "17",
@@ -633,7 +633,7 @@ const PlayerData = [
 		weight: "140",
 		class: "JR",
 		team: "vjv",
-		id: 52,
+		id: "player_52",
 	},
 	{
 		number: "18",
@@ -645,7 +645,7 @@ const PlayerData = [
 		weight: "130",
 		class: "JR",
 		team: "vjv",
-		id: 53,
+		id: "player_53",
 	},
 	{
 		number: "19",
@@ -657,7 +657,7 @@ const PlayerData = [
 		weight: "130",
 		class: "SO",
 		team: "vjv",
-		id: 54,
+		id: "player_54",
 	},
 	{
 		number: "20",
@@ -669,7 +669,7 @@ const PlayerData = [
 		weight: "160",
 		class: "SO",
 		team: "vjv",
-		id: 55,
+		id: "player_55",
 	},
 	{
 		number: "21",
@@ -681,7 +681,7 @@ const PlayerData = [
 		weight: "165",
 		class: "SR",
 		team: "vjv",
-		id: 56,
+		id: "player_56",
 	},
 	{
 		number: "22",
@@ -693,7 +693,7 @@ const PlayerData = [
 		weight: "200",
 		class: "JR",
 		team: "vjv",
-		id: 57,
+		id: "player_57",
 	},
 	{
 		number: "23",
@@ -705,7 +705,7 @@ const PlayerData = [
 		weight: "180",
 		class: "FR",
 		team: "vjv",
-		id: 58,
+		id: "player_58",
 	},
 	{
 		number: "24",
@@ -717,7 +717,7 @@ const PlayerData = [
 		weight: "175",
 		class: "JR",
 		team: "vjv",
-		id: 59,
+		id: "player_59",
 	},
 	{
 		number: "25",
@@ -729,7 +729,7 @@ const PlayerData = [
 		weight: "185",
 		class: "SO",
 		team: "vjv",
-		id: 60,
+		id: "player_60",
 	},
 	{
 		number: "26",
@@ -741,7 +741,7 @@ const PlayerData = [
 		weight: "150",
 		class: "SO",
 		team: "vjv",
-		id: 61,
+		id: "player_61",
 	},
 	{
 		number: "27",
@@ -753,7 +753,7 @@ const PlayerData = [
 		weight: "160",
 		class: "FR",
 		team: "vjv",
-		id: 62,
+		id: "player_62",
 	},
 	{
 		number: "28",
@@ -765,7 +765,7 @@ const PlayerData = [
 		weight: "175",
 		class: "SR",
 		team: "vjv",
-		id: 63,
+		id: "player_63",
 	},
 	{
 		number: "29",
@@ -777,7 +777,7 @@ const PlayerData = [
 		weight: "155",
 		class: "SO",
 		team: "vjv",
-		id: 64,
+		id: "player_64",
 	},
 	{
 		number: "30",
@@ -789,7 +789,7 @@ const PlayerData = [
 		weight: "170",
 		class: "SR",
 		team: "vjv",
-		id: 65,
+		id: "player_65",
 	},
 	{
 		number: "31",
@@ -801,7 +801,7 @@ const PlayerData = [
 		weight: "165",
 		class: "SO",
 		team: "vjv",
-		id: 66,
+		id: "player_66",
 	},
 	{
 		number: "32",
@@ -813,7 +813,7 @@ const PlayerData = [
 		weight: "170",
 		class: "JR",
 		team: "vjv",
-		id: 67,
+		id: "player_67",
 	},
 	{
 		number: "33",
@@ -825,7 +825,7 @@ const PlayerData = [
 		weight: "210",
 		class: "SO",
 		team: "vjv",
-		id: 68,
+		id: "player_68",
 	},
 	{
 		number: "34",
@@ -837,7 +837,7 @@ const PlayerData = [
 		weight: "145",
 		class: "SO",
 		team: "vjv",
-		id: 69,
+		id: "player_69",
 	},
 	{
 		number: "35",
@@ -849,7 +849,7 @@ const PlayerData = [
 		weight: "190",
 		class: "FR",
 		team: "vjv",
-		id: 70,
+		id: "player_70",
 	},
 	{
 		number: "36",
@@ -861,7 +861,7 @@ const PlayerData = [
 		weight: "160",
 		class: "SO",
 		team: "vjv",
-		id: 71,
+		id: "player_71",
 	},
 	{
 		number: "37",
@@ -873,7 +873,7 @@ const PlayerData = [
 		weight: "145",
 		class: "SO",
 		team: "vjv",
-		id: 72,
+		id: "player_72",
 	},
 	{
 		number: "39",
@@ -885,7 +885,7 @@ const PlayerData = [
 		weight: "150",
 		class: "SO",
 		team: "vjv",
-		id: 73,
+		id: "player_73",
 	},
 	{
 		number: "40",
@@ -897,7 +897,7 @@ const PlayerData = [
 		weight: "205",
 		class: "SR",
 		team: "vjv",
-		id: 74,
+		id: "player_74",
 	},
 	{
 		number: "42",
@@ -909,7 +909,7 @@ const PlayerData = [
 		weight: "160",
 		class: "FR",
 		team: "vjv",
-		id: 75,
+		id: "player_75",
 	},
 	{
 		number: "44",
@@ -921,7 +921,7 @@ const PlayerData = [
 		weight: "205",
 		class: "JR",
 		team: "vjv",
-		id: 76,
+		id: "player_76",
 	},
 	{
 		number: "45",
@@ -933,7 +933,7 @@ const PlayerData = [
 		weight: "175",
 		class: "SO",
 		team: "vjv",
-		id: 77,
+		id: "player_77",
 	},
 	{
 		number: "46",
@@ -945,7 +945,7 @@ const PlayerData = [
 		weight: "175",
 		class: "FR",
 		team: "vjv",
-		id: 78,
+		id: "player_78",
 	},
 	{
 		number: "48",
@@ -957,7 +957,7 @@ const PlayerData = [
 		weight: "200",
 		class: "JR",
 		team: "vjv",
-		id: 79,
+		id: "player_79",
 	},
 	{
 		number: "50",
@@ -969,7 +969,7 @@ const PlayerData = [
 		weight: "200",
 		class: "JR",
 		team: "vjv",
-		id: 80,
+		id: "player_80",
 	},
 	{
 		number: "51",
@@ -981,7 +981,7 @@ const PlayerData = [
 		weight: "215",
 		class: "SO",
 		team: "vjv",
-		id: 81,
+		id: "player_81",
 	},
 	{
 		number: "53",
@@ -993,7 +993,7 @@ const PlayerData = [
 		weight: "230",
 		class: "SR",
 		team: "vjv",
-		id: 82,
+		id: "player_82",
 	},
 	{
 		number: "54",
@@ -1005,7 +1005,7 @@ const PlayerData = [
 		weight: "255",
 		class: "SO",
 		team: "vjv",
-		id: 83,
+		id: "player_83",
 	},
 	{
 		number: "55",
@@ -1017,7 +1017,7 @@ const PlayerData = [
 		weight: "230",
 		class: "JR",
 		team: "vjv",
-		id: 84,
+		id: "player_84",
 	},
 	{
 		number: "56",
@@ -1029,7 +1029,7 @@ const PlayerData = [
 		weight: "240",
 		class: "SR",
 		team: "vjv",
-		id: 85,
+		id: "player_85",
 	},
 	{
 		number: "59",
@@ -1041,7 +1041,7 @@ const PlayerData = [
 		weight: "195",
 		class: "SO",
 		team: "vjv",
-		id: 86,
+		id: "player_86",
 	},
 	{
 		number: "60",
@@ -1053,7 +1053,7 @@ const PlayerData = [
 		weight: "190",
 		class: "SR",
 		team: "vjv",
-		id: 87,
+		id: "player_87",
 	},
 	{
 		number: "62",
@@ -1065,7 +1065,7 @@ const PlayerData = [
 		weight: "230",
 		class: "JR",
 		team: "vjv",
-		id: 88,
+		id: "player_88",
 	},
 	{
 		number: "64",
@@ -1077,7 +1077,7 @@ const PlayerData = [
 		weight: "195",
 		class: "JR",
 		team: "vjv",
-		id: 89,
+		id: "player_89",
 	},
 	{
 		number: "65",
@@ -1089,7 +1089,7 @@ const PlayerData = [
 		weight: "200",
 		class: "SO",
 		team: "vjv",
-		id: 90,
+		id: "player_90",
 	},
 	{
 		number: "66",
@@ -1101,7 +1101,7 @@ const PlayerData = [
 		weight: "220",
 		class: "SO",
 		team: "vjv",
-		id: 91,
+		id: "player_91",
 	},
 	{
 		number: "67",
@@ -1113,7 +1113,7 @@ const PlayerData = [
 		weight: "185",
 		class: "SO",
 		team: "vjv",
-		id: 92,
+		id: "player_92",
 	},
 	{
 		number: "70",
@@ -1125,7 +1125,7 @@ const PlayerData = [
 		weight: "280",
 		class: "SR",
 		team: "vjv",
-		id: 93,
+		id: "player_93",
 	},
 	{
 		number: "72",
@@ -1137,7 +1137,7 @@ const PlayerData = [
 		weight: "245",
 		class: "SO",
 		team: "vjv",
-		id: 94,
+		id: "player_94",
 	},
 	{
 		number: "73",
@@ -1149,7 +1149,7 @@ const PlayerData = [
 		weight: "275",
 		class: "SO",
 		team: "vjv",
-		id: 95,
+		id: "player_95",
 	},
 	{
 		number: "77",
@@ -1161,7 +1161,7 @@ const PlayerData = [
 		weight: "250",
 		class: "JR",
 		team: "vjv",
-		id: 96,
+		id: "player_96",
 	},
 	{
 		number: "78",
@@ -1173,7 +1173,7 @@ const PlayerData = [
 		weight: "255",
 		class: "SO",
 		team: "vjv",
-		id: 97,
+		id: "player_97",
 	},
 	{
 		number: "80",
@@ -1185,7 +1185,7 @@ const PlayerData = [
 		weight: "215",
 		class: "JR",
 		team: "vjv",
-		id: 98,
+		id: "player_98",
 	},
 	{
 		number: "83",
@@ -1197,7 +1197,7 @@ const PlayerData = [
 		weight: "195",
 		class: "SO",
 		team: "vjv",
-		id: 99,
+		id: "player_99",
 	},
 	{
 		number: "85",
@@ -1209,7 +1209,7 @@ const PlayerData = [
 		weight: "175",
 		class: "SO",
 		team: "vjv",
-		id: 100,
+		id: "player_100",
 	},
 	{
 		number: "86",
@@ -1221,7 +1221,7 @@ const PlayerData = [
 		weight: "175",
 		class: "SO",
 		team: "vjv",
-		id: 101,
+		id: "player_101",
 	},
 	{
 		number: "87",
@@ -1233,7 +1233,7 @@ const PlayerData = [
 		weight: "180",
 		class: "JR",
 		team: "vjv",
-		id: 102,
+		id: "player_102",
 	},
 	{
 		number: "88",
@@ -1245,7 +1245,7 @@ const PlayerData = [
 		weight: "200",
 		class: "JR",
 		team: "vjv",
-		id: 103,
+		id: "player_103",
 	},
 	{
 		number: "97",
@@ -1257,7 +1257,7 @@ const PlayerData = [
 		weight: "210",
 		class: "SO",
 		team: "vjv",
-		id: 104,
+		id: "player_104",
 	},
 ];
 

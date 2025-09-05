@@ -11,19 +11,19 @@ const PlayerDataHeaders = [
 		key: "first_name",
 		header: "First",
 	},
-	{
-		key: "class",
-		header: "Class",
-	},
+	// {
+	// 	key: "class",
+	// 	header: "Class",
+	// },
 
-	{
-		key: "position_o",
-		header: "Offense",
-	},
-	{
-		key: "position_d",
-		header: "Defense",
-	},
+	// {
+	// 	key: "position_o",
+	// 	header: "Offense",
+	// },
+	// {
+	// 	key: "position_d",
+	// 	header: "Defense",
+	// },
 	// {
 	// 	key: "height",
 	// 	header: "Height",
