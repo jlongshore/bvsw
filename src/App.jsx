@@ -222,29 +222,30 @@ function App() {
 								return (
 									<StructuredListRow key={playerIdx}>
 										<StructuredListCell>
-											{playerEl.number}
+											<strong>{playerEl.number}</strong>
 										</StructuredListCell>
 										<StructuredListCell>
-											{`${playerEl.first_name} ${playerEl.last_name}`}
+											<strong>{`${playerEl.first_name} ${playerEl.last_name}`}</strong>
 										</StructuredListCell>
 										<StructuredListCell>
 											<ul>
 												<li>
-													<strong>
-														{translateClass(
-															playerEl.class
-														)}
-													</strong>
-													&nbsp;&nbsp;
-													{`${playerEl.height} - ${playerEl.weight} lbs`}
-												</li>
+													<div>
+														<strong>
+															{translateClass(
+																playerEl.class
+															)}
+														</strong>
+													</div>
 
-												{/* {playerEl.position_o && (
-													<li>{`Offense: ${playerEl.position_o}`}</li>
-												)}
-												{playerEl.position_d && (
-													<li>{`Defense: ${playerEl.position_d}`}</li>
-												)} */}
+													<div>{`${playerEl.height} - ${playerEl.weight} lbs`}</div>
+													{playerEl.position_o && (
+														<div>{`Offense: ${playerEl.position_o}`}</div>
+													)}
+													{playerEl.position_d && (
+														<div>{`Defense: ${playerEl.position_d}`}</div>
+													)}
+												</li>
 											</ul>
 										</StructuredListCell>
 									</StructuredListRow>
