@@ -79,6 +79,10 @@
 				min-inline-size: 100%;
 			}
 		}
+
+		.cds--dropdown--inline .cds--list-box__menu {
+			min-inline-size: 14rem;
+		}
 	}
 	.playerTable {
 		margin-top: 96px;
