@@ -121,7 +121,7 @@ function App() {
 
 			<Content id="main-content" style={ContentStyle}>
 				<section className="TableShow appDataTable">
-					<div className="playerTableFilterBar">
+					<div className="playerTableSearchBar">
 						<Search
 							key="SearchControl"
 							id="playerSearchControl"
@@ -132,6 +132,8 @@ function App() {
 							value={searchValue}
 							onChange={(e) => setSearchValue(e.target.value)}
 						/>
+					</div>
+					<div className="playerTableFilterBar">
 						<Dropdown
 							id="classFilterControl"
 							label="Class filter"
@@ -228,13 +230,13 @@ function App() {
 										<StructuredListCell>
 											<ul>
 												<li>
-													{`${playerEl.height} - ${playerEl.weight} lbs`}
-													&nbsp;&nbsp;&nbsp;
 													<strong>
 														{translateClass(
 															playerEl.class
 														)}
 													</strong>
+													&nbsp;&nbsp;
+													{`${playerEl.height} - ${playerEl.weight} lbs`}
 												</li>
 
 												{/* {playerEl.position_o && (
