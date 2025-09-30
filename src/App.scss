@@ -50,7 +50,6 @@
 	.playerTableSearchBar,
 	.playerTableFilterBar {
 		position: fixed;
-
 		block-size: 48px;
 		inline-size: 100%;
 		z-index: 10000;
@@ -69,11 +68,16 @@
 			text-align: right;
 		}
 
-		#classFilterControl {
-			min-inline-size: 140px;
+		.cds--dropdown__wrapper--inline {
+			grid-gap: 0 !important;
 		}
-		#classFilterControl {
-			min-inline-size: 140px;
+
+		#classFilterControl,
+		#teamFilterControl {
+			min-inline-size: 100%;
+			button {
+				min-inline-size: 100%;
+			}
 		}
 	}
 	.playerTable {
