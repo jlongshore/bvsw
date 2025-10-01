@@ -31,65 +31,64 @@
 	display: inline-block;
 	padding-left: 16px;
 }
+
+#main-content {
+	block-size: calc(100vh - 9rem);
+	overflow-y: auto;
+	margin-block-start: 142px;
+}
+
+.cds--header ~ .cds--content,
+div:has(.cds--header) ~ .cds--content {
+	margin-block-start: 9rem;
+}
+
+.playerTableSearchBar,
+.playerTableFilterBar {
+	position: fixed;
+	block-size: 48px;
+	inline-size: 100%;
+	z-index: 10000;
+	background-color: #fff;
+}
+.playerTableSearchBar {
+	top: 48px;
+}
+.playerTableFilterBar {
+	top: 96px;
+	// padding-inline: 32px;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+
+	.cds--label {
+		text-align: right;
+	}
+
+	.cds--dropdown__wrapper--inline {
+		grid-gap: 0 !important;
+	}
+
+	#classFilterControl,
+	#teamFilterControl {
+		min-inline-size: 100%;
+		button {
+			min-inline-size: 100%;
+		}
+	}
+
+	.cds--dropdown--inline .cds--list-box__menu {
+		min-inline-size: 50%;
+	}
+}
+
 .appDataTable {
 	height: 100%;
-	// > div {
-	// 	height: 100%;
-	// 	section:nth-child(2) {
-	// 		height: calc(100% - 48px);
 
-	// 		> div {
-	// 			height: 100%;
-	// 			overflow: hidden;
-	// 			> table {
-	// 				max-block-size: calc(100svh - 100px);
-	// 			}
-	// 		}
-	// 	}
-	// }
-	.playerTableSearchBar,
-	.playerTableFilterBar {
-		position: fixed;
-		block-size: 48px;
-		inline-size: 100%;
-		z-index: 10000;
-		background-color: #fff;
-	}
-	.playerTableSearchBar {
-		top: 48px;
-	}
-	.playerTableFilterBar {
-		top: 96px;
-		// padding-inline: 32px;
-		display: grid;
-		grid-template-columns: 1fr 1fr;
-
-		.cds--label {
-			text-align: right;
-		}
-
-		.cds--dropdown__wrapper--inline {
-			grid-gap: 0 !important;
-		}
-
-		#classFilterControl,
-		#teamFilterControl {
-			min-inline-size: 100%;
-			button {
-				min-inline-size: 100%;
-			}
-		}
-
-		.cds--dropdown--inline .cds--list-box__menu {
-			min-inline-size: 14rem;
-		}
-	}
 	.playerTable {
-		margin-top: 96px;
 		position: relative;
 		.cds--structured-list-thead {
 			position: sticky;
-			top: 145px;
+			top: 1px;
 			width: 100%;
 			background-color: #e3e3e3;
 			z-index: 1000;

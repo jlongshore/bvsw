@@ -118,97 +118,96 @@ function App() {
 					</HeaderGlobalAction>
 				</HeaderGlobalBar>
 			</Header>
-
+			<div className="playerTableSearchBar">
+				<Search
+					key="SearchControl"
+					id="playerSearchControl"
+					labelText="Find player"
+					placeholder="Search player by name or number"
+					size="lg"
+					type="text"
+					value={searchValue}
+					onChange={(e) => setSearchValue(e.target.value)}
+				/>
+			</div>
+			<div className="playerTableFilterBar">
+				<Dropdown
+					id="classFilterControl"
+					label="Class filter"
+					type="inline"
+					size="lg"
+					titleText=""
+					initialSelectedItem={{
+						text: "All classes",
+					}}
+					itemToString={(item) => (item ? item.text : "")}
+					onChange={(e) => {
+						const selItemStr = e.selectedItem.text;
+						const filteredClassStr =
+							selItemStr === "Senior"
+								? "SR"
+								: selItemStr === "Junior"
+								? "JR"
+								: selItemStr === "Sophomore"
+								? "SO"
+								: selItemStr === "Freshman"
+								? "FR"
+								: "";
+						setClassFilter(filteredClassStr);
+					}}
+					items={[
+						{
+							text: "All classes",
+						},
+						{
+							text: "Senior",
+						},
+						{
+							text: "Junior",
+						},
+						{
+							text: "Sophomore",
+						},
+						{
+							text: "Freshman",
+						},
+					]}
+				/>
+				<Dropdown
+					id="teamFilterControl"
+					label="Team filter"
+					type="inline"
+					size="lg"
+					titleText=""
+					initialSelectedItem={{
+						text: "All teams",
+					}}
+					itemToString={(item) => (item ? item.text : "")}
+					onChange={(e) => {
+						const selItemStr = e.selectedItem.text;
+						const filteredTeamStr =
+							selItemStr === "Varsity / JV"
+								? "vjv"
+								: selItemStr === "Freshman"
+								? "fr"
+								: "";
+						setTeamFilter(filteredTeamStr);
+					}}
+					items={[
+						{
+							text: "All teams",
+						},
+						{
+							text: "Varsity / JV",
+						},
+						{
+							text: "Freshman",
+						},
+					]}
+				/>
+			</div>
 			<Content id="main-content" style={ContentStyle}>
 				<section className="TableShow appDataTable">
-					<div className="playerTableSearchBar">
-						<Search
-							key="SearchControl"
-							id="playerSearchControl"
-							labelText="Find player"
-							placeholder="Search player by name or number"
-							size="lg"
-							type="text"
-							value={searchValue}
-							onChange={(e) => setSearchValue(e.target.value)}
-						/>
-					</div>
-					<div className="playerTableFilterBar">
-						<Dropdown
-							id="classFilterControl"
-							label="Class filter"
-							type="inline"
-							size="lg"
-							titleText=""
-							initialSelectedItem={{
-								text: "All classes",
-							}}
-							itemToString={(item) => (item ? item.text : "")}
-							onChange={(e) => {
-								const selItemStr = e.selectedItem.text;
-								const filteredClassStr =
-									selItemStr === "Senior"
-										? "SR"
-										: selItemStr === "Junior"
-										? "JR"
-										: selItemStr === "Sophomore"
-										? "SO"
-										: selItemStr === "Freshman"
-										? "FR"
-										: "";
-								setClassFilter(filteredClassStr);
-							}}
-							items={[
-								{
-									text: "All classes",
-								},
-								{
-									text: "Senior",
-								},
-								{
-									text: "Junior",
-								},
-								{
-									text: "Sophomore",
-								},
-								{
-									text: "Freshman",
-								},
-							]}
-						/>
-						<Dropdown
-							id="teamFilterControl"
-							label="Team filter"
-							type="inline"
-							size="lg"
-							titleText=""
-							initialSelectedItem={{
-								text: "All teams",
-							}}
-							itemToString={(item) => (item ? item.text : "")}
-							onChange={(e) => {
-								const selItemStr = e.selectedItem.text;
-								const filteredTeamStr =
-									selItemStr === "Varsity / JV"
-										? "vjv"
-										: selItemStr === "Freshman"
-										? "fr"
-										: "";
-								setTeamFilter(filteredTeamStr);
-							}}
-							items={[
-								{
-									text: "All teams",
-								},
-								{
-									text: "Varsity / JV",
-								},
-								{
-									text: "Freshman",
-								},
-							]}
-						/>
-					</div>
 					<StructuredListWrapper className="playerTable">
 						<StructuredListHead>
 							<StructuredListRow>
@@ -239,12 +238,12 @@ function App() {
 													</div>
 
 													<div>{`${playerEl.height} - ${playerEl.weight} lbs`}</div>
-													{playerEl.position_o && (
+													{/* {playerEl.position_o && (
 														<div>{`Offense: ${playerEl.position_o}`}</div>
 													)}
 													{playerEl.position_d && (
 														<div>{`Defense: ${playerEl.position_d}`}</div>
-													)}
+													)} */}
 												</li>
 											</ul>
 										</StructuredListCell>
